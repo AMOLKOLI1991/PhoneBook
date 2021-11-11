@@ -46,6 +46,7 @@ public class ContactServiceImpl implements ContactServiceI{
 		boolean status =contactRepository.existsById(contactId);
 		if(status) {
 			contactRepository.deleteById(contactId);
+			return true;
 		}
 		return false;
 	}
